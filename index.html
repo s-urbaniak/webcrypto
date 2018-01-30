@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Copyright 2015 Info Tech, Inc. Provided under the MIT license. See LICENSE file for details. -->
+<html>
+    <head>
+        <title>PBKDF2 + AES-GCM encryption/decryption</title>
+        <script src="OpenCrypto.js"></script>
+        <script src="crypto.js"></script>
+    </head>
+
+    <body>
+        <h1>Password Based Key Derivation</h1>
+
+        <section id="key-management">
+            <p>Salt: <input type="text" size="32" id="salt"/>
+                <button id="salt-btn">Generate Salt</button>
+            </p>
+            <p>Password: <input type="text" size="32" id="pwd"/>
+                <button id="pwd-btn">Derive Key</button>
+            </p>
+            <p>
+                Key: <span id="key">N/A</span>
+            </p>
+            <p>
+                Data:
+            </p>
+            <p>
+                <textarea id="data" rows="4" cols="50"></textarea>
+            </p>
+            <p>
+                <button id="encrypt-btn">Encrypt</button>
+            </p>
+            <p>
+                <textarea id="encrypted" rows="4" cols="50"></textarea>
+            </p>
+            <p>
+                <button id="decrypt-btn">Decrypt</button>
+            </p>
+            <p>
+                <textarea id="decrypted" rows="4" cols="50"></textarea>
+            </p>
+        </section>
+    </body>
+</html>
